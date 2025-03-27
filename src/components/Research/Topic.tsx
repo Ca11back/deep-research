@@ -15,8 +15,6 @@ import {
 } from "@/components/ui/form";
 import { Textarea } from "@/components/ui/textarea";
 import useDeepResearch from "@/hooks/useDeepResearch";
-import { useGlobalStore } from "@/store/global";
-import { useSettingStore } from "@/store/setting";
 import { useTaskStore } from "@/store/task";
 import { useHistoryStore } from "@/store/history";
 
