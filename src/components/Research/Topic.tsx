@@ -42,21 +42,15 @@ function Topic() {
   }, [taskStore.question, form]);
 
   async function handleSubmit(values: z.infer<typeof formSchema>) {
-    const { apiKey, accessPassword } = useSettingStore.getState();
-    if (apiKey || accessPassword) {
-      const { id, setQuestion } = useTaskStore.getState();
-      setIsThinking(true);
-      if (id !== "") {
-        createNewResearch();
-        form.setValue("topic", values.topic);
-      }
-      setQuestion(values.topic);
-      await askQuestions();
-      setIsThinking(false);
-    } else {
-      const { setOpenSetting } = useGlobalStore.getState();
-      setOpenSetting(true);
+    const { id, setQuestion } = useTaskStore.getState();
+    setIsThinking(true);
+    if (id !== "") {
+      createNewResearch();
+      form.setValue("topic", values.topic);
     }
+    setQuestion(values.topic);
+    await askQuestions();
+    setIsThinking(false);
   }
 
   function createNewResearch() {

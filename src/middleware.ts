@@ -15,7 +15,7 @@ export function middleware(request: NextRequest) {
   for (const apiRoute of apiRoutes) {
     if (request.nextUrl.pathname.startsWith(apiRoute)) {
       const authorization = request.headers.get("x-goog-api-key");
-      if (isEqual(authorization, null) || authorization !== accessPassword) {
+      if (accessPassword !== "" && authorization !== accessPassword) {
         return NextResponse.json(
           {
             error: {
