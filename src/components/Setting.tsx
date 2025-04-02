@@ -51,7 +51,6 @@ const BUILD_MODE = process.env.NEXT_PUBLIC_BUILD_MODE;
 const formSchema = z.object({
   apiKey: z.string().optional(),
   apiProxy: z.string().optional(),
-  accessPassword: z.string().optional(),
   thinkingModel: z.string(),
   networkingModel: z.string(),
   language: z.string().optional(),
@@ -112,7 +111,6 @@ function Setting({ open, onClose }: SettingProps) {
     update({
       apiKey: form.getValues("apiKey"),
       apiProxy: form.getValues("apiProxy"),
-      accessPassword: form.getValues("accessPassword"),
     });
   }
 
@@ -186,26 +184,9 @@ function Setting({ open, onClose }: SettingProps) {
                 />
               </TabsContent>
               <TabsContent className="space-y-4" value="server">
-                <FormField
-                  control={form.control}
-                  name="accessPassword"
-                  render={({ field }) => (
-                    <FormItem className="from-item">
-                      <FormLabel className="col-span-1">
-                        {t("setting.accessPassword")}
-                        <span className="ml-1 text-red-500">*</span>
-                      </FormLabel>
-                      <FormControl className="col-span-3">
-                        <Input
-                          type="password"
-                          placeholder={t("setting.accessPasswordPlaceholder")}
-                          {...field}
-                          onBlur={() => handleValueChange()}
-                        />
-                      </FormControl>
-                    </FormItem>
-                  )}
-                />
+                <div className="text-sm text-muted-foreground">
+                  {t("setting.server")} {t("setting.description")}
+                </div>
               </TabsContent>
             </Tabs>
 

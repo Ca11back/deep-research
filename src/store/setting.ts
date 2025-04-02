@@ -4,7 +4,6 @@ import { persist } from "zustand/middleware";
 export interface SettingStore {
   apiKey: string;
   apiProxy: string;
-  accessPassword: string;
   thinkingModel: string;
   networkingModel: string;
   language: string;
@@ -18,7 +17,6 @@ interface SettingFunction {
 export const defaultValues: SettingStore = {
   apiKey: "",
   apiProxy: "",
-  accessPassword: "",
   thinkingModel: "gemini-2.0-flash-thinking-exp",
   networkingModel: "gemini-2.0-flash-exp",
   language: "",

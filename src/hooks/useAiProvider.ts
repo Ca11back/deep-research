@@ -3,7 +3,7 @@ import { useSettingStore } from "@/store/setting";
 import { shuffle } from "radash";
 
 export function useModelProvider() {
-  const { apiKey = "", apiProxy, accessPassword } = useSettingStore();
+  const { apiKey = "", apiProxy } = useSettingStore();
 
   function createProvider(type: "google") {
     const apiKeys = shuffle(apiKey.split(","));
@@ -19,7 +19,7 @@ export function useModelProvider() {
             }
           : {
               baseURL: "/api/ai/google/v1beta",
-              apiKey: accessPassword,
+              apiKey: "",
             }
       );
     } else {
