@@ -1,6 +1,5 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
-import { isEqual } from "radash";
 
 const apiRoutes = ["/api/ai/"];
 
