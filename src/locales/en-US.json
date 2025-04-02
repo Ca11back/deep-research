@@ -104,8 +104,6 @@
     "apiKeyLabel": "Api Key",
     "apiKeyPlaceholder": "Please enter the Model Api Key",
     "apiUrlLabel": "Api Url",
-    "accessPassword": "Access Password",
-    "accessPasswordPlaceholder": "Please enter the server access password",
     "thinkingModel": "Thinking Model",
     "networkingModel": "Networking Model",
     "thinkingModels": "Thinking Models (Recommend)",

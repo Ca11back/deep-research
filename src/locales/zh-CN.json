@@ -104,8 +104,6 @@
     "apiKeyLabel": "API 密钥",
     "apiKeyPlaceholder": "请在此处输入您的模型 API 密钥",
     "apiUrlLabel": "API 链接",
-    "accessPassword": "访问密码",
-    "accessPasswordPlaceholder": "请输入服务器访问密码",
     "thinkingModel": "思维模型",
     "networkingModel": "联网模型",
     "thinkingModels": "思维模型（推荐）",

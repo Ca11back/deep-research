@@ -48,8 +48,8 @@ function Topic() {
   }, [taskStore.question, form]);
 
   async function handleSubmit(values: z.infer<typeof formSchema>) {
-    const { apiKey, accessPassword } = useSettingStore.getState();
-    if (apiKey || accessPassword) {
+    const { apiKey } = useSettingStore.getState();
+    if (apiKey) {
       const { id, setQuestion } = useTaskStore.getState();
       try {
         setIsThinking(true);
