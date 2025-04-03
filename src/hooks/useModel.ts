@@ -34,7 +34,12 @@ function useModel() {
       setModelList(newModelList);
       return newModelList;
     } else {
-      const response = await fetch("/api/ai/google/v1beta/models");
+      const response = await fetch("/api/ai/google/v1beta/models",
+        {
+          headers: {
+            "x-goog-api-key": "",
+          },
+        });
       const { models = [] } = await response.json();
       const newModelList = (models as Model[])
         .filter(
