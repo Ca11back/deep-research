@@ -37,7 +37,7 @@ function useModel() {
       const response = await fetch("/api/ai/google/v1beta/models",
         {
           headers: {
-            "x-goog-api-key": "",
+            "x-goog-api-key": "SERVER_API_KEY",
           },
         });
       const { models = [] } = await response.json();
